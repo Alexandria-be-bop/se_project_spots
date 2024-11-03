@@ -6,5 +6,10 @@
 
 .footer__copyright {
   margin: 0;
-  
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: rgba(33, 33, 33, 0.7);
 }
