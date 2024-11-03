@@ -45,10 +45,11 @@
 @media screen and (max-width: 627px) {
   .card__image {
     max-width: 288px;
+    max-height: 288px;
   }
 
-  .card__content{
-  width: 288px;
+  .card__content {
+    width: 288px;
   }
 
   .card__title {
