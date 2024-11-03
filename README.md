@@ -15,4 +15,4 @@ An image site optimized for a variety of desktop and mobile through the use of g
 ## Deploment 
 
 This webpage is deployed to GitHub Pages
-. Link
+. [Link](https://alexandria-be-bop.github.io/se_project_spots/)
