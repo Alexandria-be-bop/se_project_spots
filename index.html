@@ -6,7 +6,6 @@
     <meta name="description" content="???" />
     <meta name="keywords" content="HTML,CSS" />
     <meta name="author" content="Liam Devine" />
-    <link rel="stylesheet" href="vendor/normalize.css" />
     <link rel="stylesheet" href="pages/index.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Spots</title>
@@ -14,7 +13,7 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.png" alt="Spot Logo" class="header_logo" />
+        <img src="./images/logo.svg" alt="Spot Logo" class="header_logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
@@ -27,11 +26,15 @@
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
-              <img src="./images/pencil.svg" alt="Pencil icon" />Edit Profile
+              Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img src="./images/plus.svg" alt="Plus icon"/>New Post
+            <img
+              src="./images/plus.svg"
+              alt="Plus icon"
+              class="profile__btn-plus"
+            />New Post
           </button>
         </section>
         <section class="cards page__section">

@@ -52,6 +52,7 @@
   font-size: 16px;
   line-height: 1;
   padding: 90px;
+  margin-top: auto;
   background: none;
   border: none;
   opacity: 70%;
@@ -62,11 +63,11 @@
 }
 
 .profile__edit-btn:hover {
-  opacity: 100%;
+  opacity: 70%;
 }
 
 .profile__add-btn {
-  color: #fff;
+  color: #fcf5e5;
   background-color: #212121;
   border: none;
   width: 149px;
@@ -83,6 +84,10 @@
   transition-duration: 0.4s;
 }
 
+.profile__btn-plus {
+  margin-right: 8px;
+}
+
 .profile__add-btn:hover {
   opacity: 80%;
 }
@@ -97,7 +102,7 @@
   }
   .profile__add-btn {
     margin: auto;
-    width: 288px;
+    width: 280px;
   }
 
   .profile__edit-btn {
