@@ -17,6 +17,7 @@
 }
 
 .profile__name {
+  color: #212121;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: 500;
@@ -46,6 +47,7 @@
 }
 
 .profile__edit-btn {
+  color: #212121;
   display: flex;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
@@ -63,7 +65,7 @@
 }
 
 .profile__edit-btn:hover {
-  opacity: 70%;
+  opacity: 100%;
 }
 
 .profile__add-btn {
