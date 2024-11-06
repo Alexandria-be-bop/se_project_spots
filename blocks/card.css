@@ -20,7 +20,6 @@
   font-weight: 500;
   line-height: 24px;
   max-width: 355px;
-  height: 26px;
   margin: 0;
   text-align: left;
   text-overflow: ellipsis;
@@ -58,6 +57,5 @@
     font-size: 16px;
     line-height: 16px;
     max-width: 250px;
-    height: 18px;
   }
 }

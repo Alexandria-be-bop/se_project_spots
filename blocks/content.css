@@ -2,6 +2,7 @@
   padding: 0 20px;
 }
 
+/* Changes display when using a phone */
 @media screen and (max-width: 627px) {
   .content {
     padding-bottom: 20px;
