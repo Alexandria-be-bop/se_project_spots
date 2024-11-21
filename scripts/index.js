@@ -10,6 +10,7 @@ const initialCards = [
   {
     name: "An outdoor cafe",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
+    alt: "Outdoor dinning",
   },
   {
     name: "A very long bridge, over the forest and through the trees",
@@ -50,6 +51,7 @@ function getCardElement(data) {
 
   cardNameEl.textContent = data.name;
   cardImgEl.src = data.link;
+  cardImgEl.alt = data.name;
   return cardElement;
 }
 
@@ -64,7 +66,6 @@ function closeModal() {
 }
 
 function handleEditFormSubmit(evt) {
-  debugger;
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
