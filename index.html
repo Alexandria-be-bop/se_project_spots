@@ -42,6 +42,8 @@
           <ul class="cards__list">
             <template id="card__template">
               <li class="card">
+                <!-- Where best should I put this button \/ -->
+                <button type="submit" class="modal__delete-btn"></button>
                 <img src="" alt="" class="card__image" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
@@ -55,6 +57,8 @@
       <footer class="footer">
         <p class="footer__copyright">&copy;2024 Liam Devine</p>
       </footer>
+
+      <!-- edit profile modal -->
       <div class="modal" id="edit-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
@@ -82,6 +86,56 @@
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
+        </div>
+      </div>
+
+      <!-- Add card modal -->
+      <div class="modal" id="add-card-modal">
+        <div class="modal__container">
+          <button
+            aria-label="close modal"
+            type="button"
+            class="modal__close-btn"
+          >
+            <img src="./images/close-icon.svg" />
+          </button>
+          <h2 class="modal__title">New Post</h2>
+          <form id="add-card-form" class="modal__form">
+            <label for="add-card-link-input" class="modal__label">
+              Image link
+              <input
+                id="add-card-link-input"
+                class="modal__input"
+                name="link"
+                placeholder="Paste a link to the picture"
+                type="url"
+              />
+            </label>
+            <label for="add-card-name-input" class="modal__label">
+              Caption
+              <input
+                id="add-card-name-input"
+                class="modal__input"
+                name="name"
+                placeholder="Type your caption"
+                type="text"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- New Post -->
+      <div class="modal" id="preview-modal">
+        <div class="modal__content modal__content_type_preview">
+          <button
+            aria-label="close modal .modal__close_type_preview"
+            type="button"
+            class="modal__close-btn"
+          ></button>
+          <img class="modal__image" src="#" alt="" />
+          <p class="modal__caption"></p>
         </div>
       </div>
     </div>
