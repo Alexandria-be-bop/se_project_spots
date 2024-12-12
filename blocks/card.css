@@ -1,3 +1,7 @@
+.card {
+  position: relative;
+}
+
 .card__image {
   height: 413px;
   width: 100%;
@@ -28,7 +32,7 @@
 }
 
 .card__like-btn {
-  background-image: url(../images/heart.svg);
+  background-image: url("../images/heart.svg");
   height: 20px;
   width: 23px;
   border: none;
@@ -45,10 +49,12 @@
 
 .card__like-button_liked {
   background-image: url("../images/liked-icon.svg");
+  height: 20px;
+  width: 22px;
   opacity: 1;
 }
 
-.card__liked-button_liked:hover {
+.card__like-button_liked:hover {
   background-image: url("../images/liked-icon_hover.svg");
   opacity: 1;
 }
@@ -68,5 +74,4 @@
     line-height: 16px;
     max-width: 250px;
   }
-
 }

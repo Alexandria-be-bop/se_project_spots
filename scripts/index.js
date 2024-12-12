@@ -101,12 +101,12 @@ function handleEditprofileSubmit(evt) {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
   const inputValues = {
-    name: "cardNameInput.value",
-    link: "cardLinkInput.value",
+    name: cardNameInput.value,
+    link: cardLinkInput.value,
   };
   const cardEl = getCardElement(inputValues);
   cardList.prepend(cardEl);
-  close(cardModal);
+  closeModal(cardModal);
 }
 
 editModalBtn.addEventListener("click", () => {
@@ -128,7 +128,7 @@ cardModalCloseBtn.addEventListener("click", () => {
 });
 
 editForm.addEventListener("submit", handleEditprofileSubmit);
-editForm.addEventListener("submit", handleAddCardSubmit);
+cardForm.addEventListener("submit", handleAddCardSubmit);
 
 // listing out the cards
 initialCards.forEach((card) => {
