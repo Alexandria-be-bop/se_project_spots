@@ -26,6 +26,8 @@ const initialCards = [
   },
 ];
 
+const closeButtons = document.querySelectorAll(".modal__close");
+
 // Profile Elemenets
 const editModalBtn = document.querySelector(".profile__edit-btn");
 const cardModalBtn = document.querySelector(".profile__add-btn");
@@ -92,7 +94,7 @@ function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
 
-function handleEditprofileSubmit(evt) {
+function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = nameInput.value;
   profileDescriptionEl.textContent = descriptionInput.value;
@@ -116,23 +118,16 @@ editModalBtn.addEventListener("click", () => {
   openModal(editModal);
 });
 
-editModalCloseBtn.addEventListener("click", () => {
-  closeModal(editModal);
-});
-
 cardModalBtn.addEventListener("click", () => {
   openModal(cardModal);
 });
 
-cardModalCloseBtn.addEventListener("click", () => {
-  closeModal(cardModal);
+closeButtons.forEach((button) => {
+  const popup = button.closest(".modal");
+  button.addEventListener("click", () => closeModal(popup));
 });
 
-previewModalCloseBtn.addEventListener("click", () => {
-  closeModal(previewModal);
-});
-
-editForm.addEventListener("submit", handleEditprofileSubmit);
+editForm.addEventListener("submit", handleEditProfileSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
 // listing out the cards
