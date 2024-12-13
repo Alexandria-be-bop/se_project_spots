@@ -32,7 +32,7 @@
   box-sizing: border-box;
 }
 
-.modal__content_type_preview {
+.modal__preview {
   padding: 0;
   position: relative;
 }
@@ -72,7 +72,7 @@
   opacity: 40%;
 }
 
-.preview-modal__close-btn {
+.modal__close_preview {
   background-image: url(../images/close-light.svg);
   top: 0;
   right: -52.5px;
@@ -137,6 +137,7 @@
   top: 10px;
   right: 10px;
   position: absolute;
+  cursor: pointer;
 }
 
 .modal__delete-btn:hover {
@@ -174,7 +175,7 @@
     left: 246px;
   }
 
-  .preview-modal__close-btn {
+  .modal__close_preview {
     top: -42px;
     right: 0;
     opacity: 1;
