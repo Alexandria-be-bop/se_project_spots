@@ -141,7 +141,7 @@
   border-radius: 8px;
 }
 
-.modal__submit-type-disabled {
+.modal__submit-btn_disabled {
   cursor: default;
   opacity: 50%;
 }

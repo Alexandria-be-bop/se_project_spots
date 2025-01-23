@@ -90,24 +90,24 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
-  document.addEventListener("keydown", modalEscClose);
-  modal.addEventListener("mousedown", modalOverlayClose);
+  document.addEventListener("keydown", handleEscape);
+  modal.addEventListener("mousedown", handleOverlay);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", modalEscClose);
-  modal.removeEventListener("mousedown", modalOverlayClose);
+  document.removeEventListener("keydown", handleEscape);
+  modal.removeEventListener("mousedown", handleOverlay);
 }
 
-function modalEscClose(evt) {
+function handleEscape(evt) {
   if (evt.key === "Escape") {
     const modal = document.querySelector(".modal_opened");
     closeModal(modal);
   }
 }
 
-function modalOverlayClose(evt) {
+function handleOverlay(evt) {
   if (evt.target.classList.contains("modal")) {
     closeModal(evt.target);
   }
@@ -117,7 +117,6 @@ function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = nameInput.value;
   profileDescriptionEl.textContent = descriptionInput.value;
-  disableButton(cardSubmitBtn, config);
   closeModal(editModal);
 }
 
