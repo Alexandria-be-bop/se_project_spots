@@ -1,3 +1,9 @@
+import "./index.css";
+import { enableValidation, config, resetValidation, disableButton } from "../scripts/validation.js";
+import avatarSrc from "../images/avatar.jpg";
+const avatarImage = document.getElementById("profile_image");
+avatarImage.src = avatarSrc;
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -162,3 +168,5 @@ initialCards.forEach((card) => {
   const cardEl = getCardElement(card);
   cardList.append(cardEl);
 });
+
+enableValidation(config);
