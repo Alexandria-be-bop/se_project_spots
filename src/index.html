@@ -12,28 +12,50 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="<%=require('./images/logo.svg')%>" alt="Spot Logo" class="header__logo" />
+        <img
+          src="<%=require('./images/logo.svg')%>"
+          alt="Spot Logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            id="profile_image"
-            src="./images/avatar.jpg"
-            alt="Profile image"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+              <img
+                src="<%=require('./images/pencil-light.svg')%>"
+                alt="Pencil edit icon"
+                class="profile__pencil-icon"
+              />
+            </button>
+            <img
+              id="profile_image"
+              src="<%=require('./images/profile-placeholder-light.svg')%>"
+              alt="Profile image"
+              class="profile__avatar"
+            />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
-              <img src="<%=require('./images/pencil.svg')%>" alt="Pencil icon" />
+              <img
+                src="<%=require('./images/pencil.svg')%>"
+                alt="Pencil icon"
+              />
               Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img alt="Plus icon" src="<%=require('./images/plus.svg')%>" class="profile__btn-plus" />New Post
+            <img
+              alt="Plus icon"
+              src="<%=require('./images/plus.svg')%>"
+              class="profile__btn-plus"
+            />New Post
           </button>
         </section>
+
+        <!-- cards -->
         <section class="cards page__section">
           <ul class="cards__list">
             <template id="card__template">
@@ -99,7 +121,7 @@
       <div class="modal" id="add-card-modal">
         <div class="modal__container">
           <button aria-label="close modal" type="button" class="modal__close">
-            <img src="<%= require('./images/close-icon.svg')%>">
+            <img src="<%= require('./images/close-icon.svg')%>" />
           </button>
           <h2 class="modal__title">New Post</h2>
           <form id="add-card-form" class="modal__form" novalidate>
@@ -140,11 +162,60 @@
           <button
             aria-label="close modal"
             type="button"
-            class="modal__close modal__close_preview"
+            class="modal__close modal__close_offset"
           ></button>
           <img class="modal__image" src="#" alt="" />
           <p class="modal__caption"></p>
         </div>
+      </div>
+    </div>
+
+    <!-- Avatar modal -->
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button type="button" class="modal__close">
+          <img src="<%=require('./images/close-icon.svg')%>" />
+        </button>
+        <h2 class="modal__title">Edit profile avatar</h2>
+        <form name="edit-avatar-form" class="modal__form" novalidate>
+          <label for="profile-avatar-input" class="modal__label">
+            Profile Picture
+            <input
+              id="profile-avatar-input"
+              type="text"
+              class="modal__input"
+              placeholder="Paste the link to an image"
+              required
+            />
+            <span id="profile-avatar-input-error" class="modal__error"></span>
+          </label>
+          <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Delete warning Modal -->
+    <div class="modal" id="delete-modal">
+      <div class="modal__container">
+        <button aria-label="close modal" type="button" class="modal__close modal__close_offset">
+        </button>
+        <h3 class="modal__title_type_delete">
+          Are you sure you want to delete this image?
+        </h3>
+        <form class="modal__form" id="delete-form">
+          <button
+            class="modal__submit-btn modal__submit-btn_type_delete"
+            type="submit"
+          >
+            Delete
+          </button>
+          <button
+            class="modal__submit-btn modal__submit-btn_type_cancel"
+            type="button"
+          >
+            Cancel
+          </button>
+        </form>
       </div>
     </div>
   </body>
