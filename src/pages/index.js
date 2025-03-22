@@ -192,6 +192,7 @@ function handleAvatarSubmit(evt) {
     .then((data) => {
       profileImage.src = data.avatar;
       evt.target.reset();
+      disableButton(submitBtn, config);
       closeModal(avatarModal);
     })
     .catch(console.error)
@@ -201,7 +202,7 @@ function handleAvatarSubmit(evt) {
 }
 
 function handleLike(evt, id) {
-  let isLiked = evt.target.classList.contains("card__like-button_liked");
+  const isLiked = evt.target.classList.contains("card__like-button_liked");
 
   api
     .handleLikeStatus(id, isLiked)
